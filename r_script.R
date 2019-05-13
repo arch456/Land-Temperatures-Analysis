@@ -30,6 +30,9 @@ max <- (filter(temp_global,dt == max(temp_global$dt)))$LandAverageTemperature
 percent_increase <- (max-min)*100/min
 print(percent_increase)
 
+#----------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------
+
 # load the data
 temp_country <- read_csv('C:/Users/archa/Documents/Archana/DSP_539/Project/data/GlobalLandTemperaturesByCountry.csv')
 
@@ -57,6 +60,8 @@ max <- (filter(summ_temp_US,dt == max(summ_temp_US$dt)))$temp
 percent_increase <- (max-min)*100/min
 print(percent_increase)
 
+#------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------
 
 #GlobalLandTemperaturesByState
 
@@ -103,6 +108,10 @@ state_increase <- data.frame("State" = c(state_names), "Increase" = c(percent_in
 # plot the data for percent increase in each state over the last century
 ggplot(state_increase, aes(y = State, x = Increase)) +
   geom_point(size = 3) + labs(title = "Average Increase in all the States over the last century",x = "Increase in Temperature", y  = "State")
+
+
+#------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------
 
 #GlobalLandTemperaturesByMajorCity
 
